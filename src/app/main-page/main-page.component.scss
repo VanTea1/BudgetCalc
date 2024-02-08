@@ -1,0 +1,56 @@
+@import '../../main-styles.scss';
+
+.topBar{
+    display: flex;
+    width: 100%;
+    height: 68px;
+    background: linear-gradient(75deg, rgb(214, 180, 247), rgb(173, 203, 231));
+
+    //Text centering horiontal and vertical
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        font-size: 18px;
+        font-family: 'Lato';
+        letter-spacing: 1px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $dark;
+    }
+}
+
+.totalBudgetSection{
+    display: flex;
+    height: 255px;
+    background: $dark;
+
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        font-family: 'Lato';
+        font-weight: 300;
+        font-size: 58px;
+        color: white; //will be changed later
+
+        &.negative{
+            color: lighten($color: $red, $amount: 12%);
+        }
+
+        &.positive{
+            color: lighten($color: $green, $amount: 12%);
+        }
+    }
+}
+
+.addItemSection{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    .addItemContainer{
+        width: 680px;
+    }
+}
