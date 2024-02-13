@@ -7,5 +7,11 @@
 </section>
 
 <section class="addItemSection">
-    <div class="addItemContainer"></div>
+    <div class="addItemContainer">
+        <app-add-item-form style="padding: 20px;" (formSubmit)="addItem($event)"></app-add-item-form>
+    </div>
 </section>
+
+<hr style="margin-top: 0;">
+
+<app-budget-item-list [budgetItems]="budgetItems" (delete)="deleteItem($event)"></app-budget-item-list>
