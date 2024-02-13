@@ -3,7 +3,7 @@
 </div>
 
 <section class="totalBudgetSection">
-    <h2 class="negative">240</h2>
+    <h2 [ngClass]="{ 'rot': totalBudget < 0, 'gruen': totalBudget > 0 }">{{ totalBudget }}</h2>
 </section>
 
 <section class="addItemSection">
@@ -14,4 +14,4 @@
 
 <hr style="margin-top: 0;">
 
-<app-budget-item-list [budgetItems]="budgetItems" (delete)="deleteItem($event)"></app-budget-item-list>
+<app-budget-item-list [budgetItems]="budgetItems" (delete)="deleteItem($event)" (update)="updateItem($event)"></app-budget-item-list>

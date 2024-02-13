@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { BudgetItem } from 'src/shared/models/budget-item.model';
 
 @Component({
@@ -8,10 +9,12 @@ import { BudgetItem } from 'src/shared/models/budget-item.model';
 })
 export class EditItemModelComponent {
 
-  @Input()
-  item!: BudgetItem;
+
+  constructor(public dialogRef: MatDialogRef<EditItemModelComponent>,
+    @Inject(MAT_DIALOG_DATA) public item: BudgetItem
+    ){ }
 
   public onSubmitted(updatedItem: BudgetItem){
-    
+    this.dialogRef.close(updatedItem);
   }
 }
