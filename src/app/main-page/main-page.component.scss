@@ -62,3 +62,19 @@
 .gruen{
     color: #00cc86 !important;
 }
+
+
+@media only screen and (max-width: 768px) {
+
+    .addItemSection{
+        .addItemContainer{
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+}

@@ -85,3 +85,29 @@
         background-color: $light-green;
     }
 }
+
+
+@media only screen and (max-width: 768px) {
+
+    .root{
+        max-width: 160px;
+        padding: 0;
+        margin: 0;
+        min-width: 160px;
+
+        .budget-item{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            
+
+            .description{
+                overflow: hidden;
+            }
+        }
+    }
+
+    .x-icon-button{
+        display: none;
+    }
+
+}

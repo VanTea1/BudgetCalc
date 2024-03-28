@@ -49,3 +49,24 @@
         }
     }
 }
+
+
+
+@media only screen and (max-width: 768px) {
+    .budget-items-section{
+        padding: 15px;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    .budget-items{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        margin: 10px;
+        min-width: 160px;
+    }
+}
