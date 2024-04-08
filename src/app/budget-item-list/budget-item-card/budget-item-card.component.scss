@@ -1,144 +1,135 @@
 @import "../../../main-styles.scss";
 
-.root{
+.root {
+  display: flex;
+  width: 100%;
+  position: relative;
+
+  &:hover {
+    .x-icon-button {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .budget-item {
     display: flex;
     width: 100%;
-    position: relative;
+    padding: 10px;
+    background: $light-grey;
+    border-radius: 5px;
 
-    &:hover{
-        .x-icon-button{
-            opacity: 1;
-            transform: scale(1);
-        }
+    transition: background-color 0.2s ease-out;
+
+    cursor: pointer;
+
+    .description {
+      display: flex;
+      flex-grow: 1;
+      font-size: 18px;
+      margin-left: 5px;
+
+      align-items: center;
     }
 
-    .budget-item{
-        display: flex;
-        width: 100%;
-        padding: 10px;
-        background: $light-grey;
-        border-radius: 5px;
+    .amount {
+      padding: 5px;
+      border-radius: 3px;
+    }
 
-        transition: background-color 0.2s ease-out;
+    &:hover {
+      background-color: darken($light-grey, 5%);
+    }
+  } //end budget-item
 
-        cursor: pointer;
+  .x-icon-button {
+    position: absolute;
+    height: 34px;
+    width: 34px;
+    background: $dark;
+    right: -17px; //half of width and minus
+    border-radius: 50%;
+    top: -17px; //half of height and minus
+    background-image: url("../../../assets/delete_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 
-        .description{
-            display: flex;
-            flex-grow: 1;
-            font-size: 18px;
-            margin-left: 5px;
+    transform: scale(0);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    opacity: 0;
 
-            align-items: center;
-        }
+    cursor: pointer;
 
-        .amount{
-            padding: 5px;
-            border-radius: 3px;
-        }
-
-        &:hover{
-            background-color: darken($light-grey, 5%);
-        }
-    } //end budget-item
-
-    .x-icon-button{
-        position: absolute;
-        height: 34px;
-        width: 34px;
-        background: $dark;
-        right: -17px; //half of width and minus
-        border-radius: 50%;
-        top: -17px; //half of height and minus
-        background-image: url('../../../assets/delete_icon.svg');
-        background-repeat: no-repeat;
-        background-position: center;    
-
-        transform: scale(0);
-        transition: opacity 0.2s ease-out, transform 0.2s ease-out;
-        opacity: 0;
-
-        cursor: pointer;
-        
-        &:hover{
-            transform: scale(1.2);
-        }
-    }  //end x-icon
+    &:hover {
+      transform: scale(1.2);
+    }
+  } //end x-icon
 } //end root
 
-.expense{
-    p{
-        color: $red;
-    }
+.expense {
+  p {
+    color: $red;
+  }
 
-    .amount{
-        background-color: $light-red;
-    }
+  .amount {
+    background-color: $light-red;
+  }
 }
 
-.income{
-    p{
-        color: $green;
-    }
+.income {
+  p {
+    color: $green;
+  }
 
-    .amount{
-        background-color: $light-green;
-    }
+  .amount {
+    background-color: $light-green;
+  }
 }
-
 
 @media only screen and (max-width: 768px) {
+  .root {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
 
-    .root{
-        max-width: 160px;
-        padding: 0;
-        margin: 0;
-        min-width: 160px;
+    .budget-item {
+      white-space: nowrap;
+      text-overflow: ellipsis;
 
-        .budget-item{
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            
+      .description {
+        overflow: hidden;
+      }
+    }
 
-            .description{
-                overflow: hidden;
-            }
-        }
-        
-        .x-icon-button{
-            opacity: 1;
-            transform: scale(1); 
-            transition: none; 
-        
-        }  //end x-icon
-    } //end root
-
+    .x-icon-button {
+      opacity: 1;
+      transform: scale(1);
+      transition: none;
+    } //end x-icon
+  } //end root
 }
 
 @media only screen and (max-width: 1024px) {
+  .root {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
 
-    .root{
-        max-width: 160px;
-        padding: 0;
-        margin: 0;
-        min-width: 160px;
+    .budget-item {
+      white-space: nowrap;
+      text-overflow: ellipsis;
 
-        .budget-item{
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            
+      .description {
+        overflow: hidden;
+      }
+    }
 
-            .description{
-                overflow: hidden;
-            }
-        }
-        
-        .x-icon-button{
-            opacity: 1;
-            transform: scale(1); 
-            transition: none; 
-        
-        }  //end x-icon
-    } //end root
-
+    .x-icon-button {
+      opacity: 1;
+      transform: scale(1);
+      transition: none;
+    } //end x-icon
+  } //end root
 }
