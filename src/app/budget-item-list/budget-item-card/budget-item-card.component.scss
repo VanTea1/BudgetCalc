@@ -94,11 +94,33 @@
     min-width: 160px;
 
     .budget-item {
+      padding: 8px 2px;
       white-space: nowrap;
       text-overflow: ellipsis;
 
       .description {
-        overflow: hidden;
+        padding: 5px 0;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.02;
+        text-align: center;
+        letter-spacing: 0.01em;
+        p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .amount {
+        min-width: 50px;
+        padding: 5px 0;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.02;
+        text-align: center;
+        letter-spacing: 0.01em;
+        p {
+          overflow: hidden;
+        }
       }
     }
 
@@ -120,8 +142,9 @@
     .budget-item {
       max-width: 160px;
       white-space: nowrap;
-     
-      .description, .amount {
+
+      .description,
+      .amount {
         overflow: hidden;
       }
     }
