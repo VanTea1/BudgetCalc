@@ -118,10 +118,10 @@
     min-width: 160px;
 
     .budget-item {
+      max-width: 160px;
       white-space: nowrap;
-      text-overflow: ellipsis;
-
-      .description {
+     
+      .description, .amount {
         overflow: hidden;
       }
     }

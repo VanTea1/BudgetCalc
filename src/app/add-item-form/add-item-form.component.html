@@ -4,13 +4,13 @@
     
           <div class="field is-narrow">
             <p class="control">
-              <input type="number" required name="amount" style="width: auto;" class="input" placeholder="Menge" [ngModel]="item.amount">
+              <input type="number" required name="amount" style="width: auto;" class="input" placeholder="Menge" [ngModel]="item.amount" onKeyDown="if(this.value.length==6 && event.keyCode!=8) return false;">
             </p>
           </div>
     
           <div class="field">
             <p class="control">
-              <input type="text" required name="description" class="input" placeholder="Beschreibung" [ngModel]="item.description">
+              <input type="text" required name="description" class="input" placeholder="Beschreibung" [ngModel]="item.description" maxlength="10">
             </p>
           </div>
 
