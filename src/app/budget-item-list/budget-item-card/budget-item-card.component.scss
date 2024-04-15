@@ -40,7 +40,9 @@
     &:hover {
       background-color: darken($light-grey, 5%);
     }
-  } //end budget-item
+  }
+
+  //end budget-item
 
   .x-icon-button {
     position: absolute;
@@ -63,8 +65,12 @@
     &:hover {
       transform: scale(1.2);
     }
-  } //end x-icon
-} //end root
+  }
+
+  //end x-icon
+}
+
+//end root
 
 .expense {
   p {
@@ -105,11 +111,13 @@
         line-height: 1.02;
         text-align: center;
         letter-spacing: 0.01em;
+
         p {
           overflow: hidden;
           text-overflow: ellipsis;
         }
       }
+
       .amount {
         min-width: 50px;
         padding: 5px 0;
@@ -118,6 +126,7 @@
         line-height: 1.02;
         text-align: center;
         letter-spacing: 0.01em;
+
         p {
           overflow: hidden;
         }
@@ -128,8 +137,12 @@
       opacity: 1;
       transform: scale(1);
       transition: none;
-    } //end x-icon
-  } //end root
+    }
+
+    //end x-icon
+  }
+
+  //end root
 }
 
 @media only screen and (max-width: 1024px) {
@@ -151,6 +164,19 @@
       opacity: 1;
       transform: scale(1);
       transition: none;
-    } //end x-icon
-  } //end root
+    }
+
+    //end x-icon
+  }
+
+  //end root
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Tablet */
+  .x-icon-button {
+    z-index: 999;
+  }
 }
