@@ -7,11 +7,17 @@
     background: linear-gradient(75deg, rgb(214, 180, 247), rgb(173, 203, 231));
 
     //Text centering horiontal and vertical
+    position: relative;
+    border-radius: 25px;
     justify-content: center;
     align-items: center;
+    width: 1250px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 35px;
 
     h1{
-        font-size: 18px;
+        font-size: 22px;
         font-family: 'Lato';
         letter-spacing: 1px;
         font-weight: 900;
@@ -22,11 +28,15 @@
 
 .totalBudgetSection{
     display: flex;
+    position: relative;
     height: 255px;
     background: $dark;
-
+    border-radius: 25px;
     justify-content: center;
     align-items: center;
+    width: 1250px;
+    margin: auto;
+    margin-bottom: 50px;
 
     h2{
         font-family: 'Lato';
@@ -65,7 +75,16 @@
 
 
 @media only screen and (max-width: 768px) {
-
+    .topBar{
+        width: auto;   
+        border-radius: 0; 
+        margin: 0;
+    }
+    .totalBudgetSection{
+        width: auto;
+        border-radius: 0;
+        margin: 0;
+    }
     .addItemSection{
         .addItemContainer{
             display: flex;
